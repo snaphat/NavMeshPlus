@@ -6,7 +6,6 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 #endif
 using Unity.AI.Navigation;
-using Unity.AI.NavigationExtended;
 
 namespace UnityEngine.AI
 {

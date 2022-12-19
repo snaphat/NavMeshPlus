@@ -7,7 +7,6 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Tilemaps;
 using Unity.AI.Navigation;
-using Unity.AI.NavigationExtended;
 using NavMeshSurface = Unity.AI.NavigationExtended.NavMeshSurface;
 
 namespace NavMeshComponents.Extensions
@@ -52,7 +51,7 @@ namespace NavMeshComponents.Extensions
             {
                 var lbounds = NavMeshSurface.GetWorldBounds(worldToLocal * tilemap.transform.localToWorldMatrix, tilemap.localBounds);
                 bounds.Encapsulate(lbounds);
-                //if (!surface.hideEditorLogs)
+                if (!surface.hideEditorLogs)
                 {
                     Debug.Log($"From Local Bounds [{tilemap.name}]: {tilemap.localBounds}");
                     Debug.Log($"To World Bounds: {bounds}");
@@ -63,7 +62,7 @@ namespace NavMeshComponents.Extensions
 
         public override void CollectSources(NavMeshSurface surface, List<NavMeshBuildSource> sources, NavMeshBuilderState navNeshState)
         {
-            //if (!surface.hideEditorLogs)
+            if (!surface.hideEditorLogs)
             {
                 if (!Mathf.Approximately(transform.eulerAngles.x, 270f))
                 {
@@ -88,7 +87,7 @@ namespace NavMeshComponents.Extensions
             builder.CollectGeometry = surface.useGeometry;
             builder.CollectObjects = (CollectObjects2d)(int)surface.collectObjects;
             builder.parent = surface.gameObject;
-            //builder.hideEditorLogs = surface.hideEditorLogs;
+            builder.hideEditorLogs = surface.hideEditorLogs;
             builder.SetRoot(navNeshState.roots);
             NavMeshBuilder2d.CollectSources(sources, builder);
         }

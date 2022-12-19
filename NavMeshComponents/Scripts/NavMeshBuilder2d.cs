@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 using Unity.AI.Navigation;
-using Unity.AI.NavigationExtended;
 
 namespace UnityEngine.AI
 {

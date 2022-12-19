@@ -78,6 +78,9 @@ namespace Unity.AI.NavigationExtended
         [SerializeField]
         bool m_BuildHeightMesh;
 
+        [SerializeField]
+        bool m_HideEditorLogs;
+
         /// <summary> Gets or sets the identifier of the agent type that will use this NavMesh Surface. </summary>
         public int agentTypeID { get { return m_AgentTypeID; } set { m_AgentTypeID = value; } }
 
@@ -132,6 +135,8 @@ namespace Unity.AI.NavigationExtended
         /// <summary> Gets or sets whether the NavMesh building process produces more detailed elevation information. </summary>
         /// <seealso href="https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.0/manual/NavMeshSurface.html#advanced-settings"/>
         public bool buildHeightMesh { get { return m_BuildHeightMesh; } set { m_BuildHeightMesh = value; } }
+
+        public bool hideEditorLogs { get { return m_HideEditorLogs; } set { m_HideEditorLogs = value; } }
 
         /// <summary> Gets or sets the reference to the NavMesh data instantiated by this surface. </summary>
         public NavMeshData navMeshData { get { return m_NavMeshData; } set { m_NavMeshData = value; } }
