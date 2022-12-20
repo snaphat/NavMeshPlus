@@ -93,13 +93,17 @@ namespace UnityEditor.AI
 #if NAVMESHCOMPONENTS_SHOW_NAVMESHDATA_REF
             m_NavMeshData = serializedObject.FindProperty("m_NavMeshData");
 #endif
+#if !UNITY_2022_2_OR_NEWER
             NavMeshVisualizationSettings.showNavigation++;
+#endif
         }
 
+#if !UNITY_2022_2_OR_NEWER
         void OnDisable()
         {
             NavMeshVisualizationSettings.showNavigation--;
         }
+#endif
 
         Bounds GetBounds()
         {
@@ -364,9 +368,11 @@ namespace UnityEditor.AI
         [DrawGizmo(GizmoType.NotInSelectionHierarchy | GizmoType.Pickable)]
         static void RenderBoxGizmoNotSelected(NavMeshSurface2d navSurface, GizmoType gizmoType)
         {
+            #if !UNITY_2022_2_OR_NEWER
             if (NavMeshVisualizationSettings.showNavigation > 0)
                 RenderBoxGizmo(navSurface, gizmoType, false);
             else
+            #endif
                 Gizmos.DrawIcon(navSurface.transform.position, "NavMeshSurface Icon", true);
         }
 
