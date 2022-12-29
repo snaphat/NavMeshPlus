@@ -44,7 +44,7 @@ namespace UnityEngine.AI
             {
                 mesh = new Mesh();
                 NavMeshBuilder2d.sprite2mesh(sprite, mesh);
-                map.Add(sprite, mesh);//
+                map.Add(sprite, mesh);
             }
             return mesh;
         }
@@ -82,14 +82,12 @@ namespace UnityEngine.AI
                 default:
                 {
                     var list = new List<GameObject>();
-                    var testlist = new List<GameObject>();
                     for (int i = 0; i < SceneManager.sceneCount; ++i)
                     {
                         var s = SceneManager.GetSceneAt(i);
                         s.GetRootGameObjects(list);
-                        testlist.AddRange(list);
                     }
-                    return testlist;
+                    return list;
                 }
             }
         }
@@ -101,7 +99,6 @@ namespace UnityEngine.AI
         {
             foreach (var it in builder.Root)
             {
-                if(!it.activeSelf){continue;}
                 CollectSources(it, sources, builder);
             }
             if (!builder.hideEditorLogs) Debug.Log("Sources " + sources.Count);

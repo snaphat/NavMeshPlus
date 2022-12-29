@@ -12,8 +12,8 @@ using NavMeshSurface = Unity.AI.NavigationExtended.NavMeshSurface;
 namespace NavMeshComponents.Extensions
 {
     [ExecuteAlways]
-    [AddComponentMenu("Navigation/NavMeshCollectSources2d", 30)]
-    public class NavMeshCollectSources2d: NavMeshExtension
+    [AddComponentMenu("Navigation/NavMesh CollectSources2d", 30)]
+    public class CollectSources2d: NavMeshExtension
     {
         [SerializeField]
         bool m_OverrideByGrid;

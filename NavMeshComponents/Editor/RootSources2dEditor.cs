@@ -7,8 +7,8 @@ using Unity.AI.NavigationExtended;
 namespace NavMeshComponents.Extensions
 {
     [CanEditMultipleObjects]
-    [CustomEditor(typeof(NavMeshCollectRootSources2d))]
-    internal class NavMeshCollectRootSources2dEditor: Editor
+    [CustomEditor(typeof(RootSources2d))]
+    internal class RootSources2dEditor: Editor
     {
         SerializedProperty _rootSources;
         void OnEnable()
@@ -20,7 +20,7 @@ namespace NavMeshComponents.Extensions
         {
             serializedObject.Update();
     
-            var surf = target as NavMeshCollectRootSources2d;
+            var surf = target as RootSources2d;
             EditorGUILayout.HelpBox("Add GameObjects to create NavMesh form it and it's ancestors", MessageType.Info);
 
             if (surf.NavMeshSurfaceOwner.collectObjects != CollectObjects.Children)

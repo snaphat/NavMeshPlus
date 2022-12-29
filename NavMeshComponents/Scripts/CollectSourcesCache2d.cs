@@ -6,8 +6,8 @@ using Unity.AI.NavigationExtended;
 namespace NavMeshComponents.Extensions
 {
     [ExecuteAlways]
-    [AddComponentMenu("Navigation/NavMeshCacheSources2d", 30)]
-    public class NavMeshCacheSources2d: NavMeshExtension
+    [AddComponentMenu("Navigation/NavMesh CacheSources2d", 30)]
+    public class CollectSourcesCache2d : NavMeshExtension
     {
         List<NavMeshBuildSource> _sources;
         Dictionary<UnityEngine.Object, NavMeshBuildSource> _lookup;
