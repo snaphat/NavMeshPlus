@@ -1,4 +1,4 @@
-using NavMeshComponents.Extensions;
+using NavMeshPlus.Extensions;
 using System;
 using System.Collections.Generic;
 #if UNITY_EDITOR
@@ -15,7 +15,7 @@ using Unity.AI.Navigation;
 [assembly: InternalsVisibleTo("Unity.AI.Navigation.Editor")]
 #endif
 
-namespace Unity.AI.NavigationExtended
+namespace NavMeshPlus.Components
 {
     /// <summary> Component used for building and enabling a NavMesh surface for one agent type. </summary>
     [ExecuteAlways]

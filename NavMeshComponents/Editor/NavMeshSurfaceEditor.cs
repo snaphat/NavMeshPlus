@@ -12,11 +12,12 @@ using UnityEditorInternal;
 using UnityEngine.AI;
 using UnityEngine;
 using System.Linq;
+using NavMeshPlus.Components;
 using Unity.AI.Navigation.Editor;
 using Unity.AI.Navigation;
-using Unity.AI.NavigationExtended;
+using NavMeshSurface = NavMeshPlus.Components.NavMeshSurface;
 
-namespace Unity.AI.NavigationExtended.Editor
+namespace NavMeshPlus.Editors.Components
 {
     [CanEditMultipleObjects]
     [CustomEditor(typeof(NavMeshSurface))]

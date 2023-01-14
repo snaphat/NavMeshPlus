@@ -7,8 +7,9 @@ using UnityEditor.Experimental.SceneManagement;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.AI;
+using NavMeshSurface = NavMeshPlus.Components.NavMeshSurface;
 
-namespace Unity.AI.NavigationExtended.Editor
+namespace NavMeshPlus.Editors.Components
 {
     /// <summary>
     /// Manages assets and baking operation of the navmesh 
