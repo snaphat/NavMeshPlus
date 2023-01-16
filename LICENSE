@@ -1,6 +1,6 @@
 MIT License
 
-All files except those listed below are Copyright (c) 2019 h8man
+All files except those listed below are Copyright (c) h8man
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,11 +22,11 @@ SOFTWARE.
 
 -----
 
-NavMeshComponents/Editor/NavMeshAssetManagerExtended.cs
-NavMeshComponents/Editor/NavMeshSurfaceExtendedEditor.cs 
-NavMeshComponents/Scripts/NavMeshSurfaceExtended.cs 
+NavMeshComponents/Editor/NavMeshAssetManager.cs
+NavMeshComponents/Editor/NavMeshSurfaceEditor.cs 
+NavMeshComponents/Scripts/NavMeshSurface.cs 
 
-copyright © 2016 Unity Technologies ApS
+copyright © Unity Technologies ApS
 
 Licensed under the Unity Companion License for Unity-dependent projects (see https://unity3d.com/legal/licenses/unity_companion_license).
 
